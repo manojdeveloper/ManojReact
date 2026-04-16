@@ -1,0 +1,15 @@
+.useStateSection {width: 100dvw; height: 100dvh; display: flex; align-items: center; justify-content: center; background: #000;
+    .useStateBox {width: 450px; background: #fff; border-radius: 8px; padding: 2rem;
+        h2 {margin: 0 0 2rem; font-size: 1.5rem; color: #000;}
+
+        p {font-size: 0.875rem; margin: 0 0 1rem;}
+
+        .footerButtons {display: flex; gap: 0.5rem;
+            button {font-size: 0.875rem; color: #fff; height: 35px; flex-basis: 0; flex-grow: 1; border: none; outline: none; 
+                background: green; border-radius: 4px; cursor: pointer;
+                &:hover {background: goldenrod;}
+                &:disabled {background: gray;}
+            }
+        }
+    }
+}

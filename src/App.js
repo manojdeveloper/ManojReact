@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Fragment } from 'react/jsx-runtime';
+import { RouterProvider } from 'react-router';
+import { myroute } from './MyRouting';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Provider } from 'react-redux';
+import { store } from './Store';
 
 function App() {
+  let queryClient = new QueryClient();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <RouterProvider router={myroute} />
+      </Provider>
+    </QueryClientProvider>
+  )
 }
 
 export default App;

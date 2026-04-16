@@ -1,0 +1,28 @@
+.productListing {width: 100%; padding: 2rem; display: flex; gap: 2rem;
+    .listingSection {flex-grow: 1; flex-shrink: 0;
+        h2 {font-size: 2rem; margin: 0 0 1rem;}
+        .productCointainer {display: flex; gap: 1rem;
+            .productCard {flex-grow: 1; flex-shrink: 0; border-radius: 0.5rem; padding: 1rem; border:1px solid rgba($color: #000000, $alpha: 0.3);
+                h3 {font-size: 1.5rem; margin: 0 0 0.25rem;}
+                h4 {font-size: 1.25rem; margin: 0 0 1rem; color: green;}
+                p {font-size: 1rem; margin: 0 0 1.5rem;}
+                button {font-size: 0.875rem; color: #000; background: greenyellow; border-radius: 4px; padding: 0.5rem 1rem; border: none; cursor: pointer;}
+            }
+        }
+    }
+
+    .cartSection {width: 20rem; border-radius: 0.5rem; padding: 1rem; border:1px solid rgba($color: #000000, $alpha: 0.3);
+        h2 {font-size: 2rem; margin: 0 0 1rem;}
+        .cartItem {display: flex; align-items: flex-start; padding:0 0 0.5rem; margin: 0 0 0.5rem; gap: 1rem; border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+            .itemInfo {flex-grow: 1; flex-shrink: 0;
+                h3 {font-size: 1.25rem; margin: 0 0 0.25rem;}
+                h4 {font-size: 1rem; margin: 0 0 0.25rem;}
+                h5 {font-size: 0.875rem; margin: 0 0 0.25rem;}
+            }
+            button {padding: 0.125rem 0.25rem; cursor: pointer;}
+        }
+        .cartTotal {padding: 0 0 0.5rem; margin: 0 0 1rem; border-bottom:1px solid rgba($color: #000000, $alpha: 0.3);}
+        .clearCart {font-size: 0.875rem; color: #fff; border-radius: 0.5rem; background: red; padding: 0.5rem 1rem; border: none; cursor: pointer;}
+    }
+
+}

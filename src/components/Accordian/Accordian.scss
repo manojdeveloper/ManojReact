@@ -1,0 +1,27 @@
+.faqAccordion {width: 100%; display: flex; flex-flow: column; gap: 1.5rem; padding: 10%;
+        .faqRow {display: flex; flex-flow: column; gap: 0.5rem;
+            .faqTitle {display: flex; justify-content: space-between; gap: 1rem; cursor: pointer;
+                h4 {font-size: 1rem; font-weight: normal; margin: 0;}
+                button {width: 1.25rem; height: 1.25rem; display: flex; justify-content: center; align-items: center; background: none; border: none; 
+                    flex-shrink: 0; cursor: pointer;
+                    .plusIcon {display: block;}
+                    .closeIcon {display: none;}
+                }
+            }
+            .faqContent {display: none;
+                p {color: #676b7e;}
+
+                &.active {display: block;}
+            }
+
+            &.active {
+                .faqTitle {
+                    button {
+                        .plusIcon {display: none;}
+                        .closeIcon {display: block;}
+                    }
+                }
+                .faqContent {display: block;}
+            }
+        }
+    }

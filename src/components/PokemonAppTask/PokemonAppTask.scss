@@ -1,0 +1,31 @@
+.pokemonSection {width: 100%; min-height: 100vh; display: flex; justify-content: center; padding: 2rem; background: #000;
+    .pokemonContainer {width: 100%; max-width: 1200px; display: flex; flex-flow: column; align-items: center;
+        h2 {font-size: 1.5rem; color: #fff; margin: 0 0 1rem;}
+
+        .nextPrevButton {width: 100%; display: flex; gap: 1rem; justify-content: center; margin: 0 0 1rem;
+            button {background: green; color: #fff; font-size: 0.875rem; padding: 0.5rem 1rem; cursor: pointer; border: none; border-radius: 4px;
+                &:hover {background: orange;}
+                &:disabled {background: #dfdfdf; cursor: auto;}
+            }
+        }
+        
+        .searchBar {width: 300px; margin: 0 0 2rem; color: #fff;
+            input {width: 100%; height: 40px; padding: 0.25rem 0.5rem; background: #fff; outline: none; border-radius: 4px;}
+        }
+
+        .pokemonCardListing {width: 100%; display: flex; flex-wrap: wrap; gap: 1rem;
+            .pokemonCard {display: flex; flex-flow: column; align-items: center; width: calc(25% - 1rem); flex-grow: 1; padding: 1rem; background: #fff; position: relative; border-radius: 4px;
+                .cardImg {width: 100%;
+                    img {max-width: 100%; max-height: 100%; width: auto; height: auto;}
+                }
+                h3 {text-align: center; margin: 0 0 1rem;}
+                .cardTag {display: inline-block; font-size: 0.75rem; margin: 0 0 1rem; background: green; padding: 0.25rem 0.5rem; color: #fff; border-radius: 20px;}
+                .detailListing {display: flex; flex-wrap: wrap; gap: 0.25rem; width: 100%;
+                    .deatilBox {display: flex; flex-flow: column; align-items: center; width: calc(33.333333% - 0.25rem); flex-grow: 1;
+                        font-size: 0.875rem; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding:1rem 0.5rem;}
+                }
+            }
+        }
+
+    }
+}
