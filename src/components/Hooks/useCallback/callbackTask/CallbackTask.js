@@ -10,7 +10,7 @@ export let CallbackTask = ()=>{
 
     let decrement = useCallback(()=>{
             SetCount((prevcount) => prevcount - 1);
-    },[]);
+    },[count]);
 
     return(
         <>

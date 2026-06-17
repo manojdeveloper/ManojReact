@@ -1,11 +1,11 @@
 import { useLayoutEffect, useEffect, useState, useRef } from "react";
-import { UserList } from "./UserList.tsx"
+import { UserList } from "./UserList.js"
 
 export let PropTypeCheck = () => {
 
     return (
         <>
-            <UserList name="manoj kumar" age={30} hobbies={["Reading", "Coding", "Cricket"]} />
+            <UserList name={30} age="manoj" hobbies={["Reading", "Coding", "Cricket"]} />
         </>
     )
 }

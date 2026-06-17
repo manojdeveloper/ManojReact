@@ -1,17 +1,14 @@
-type UserListProps = {
-    name: string;
-    age: number;
-    hobbies: string[];
-};
 
-export let UserList = ({ name, age, hobbies }: UserListProps) => {
+import PropTypes from "prop-types";
+
+export let UserList = ({ name, age, hobbies }) => {
     console.log(typeof age);
 
-    let check = (e)=>{
+    let check = (e) => {
         console.log(e);
     }
 
-    let checkinput = (e)=>{
+    let checkinput = (e) => {
         console.log(e);
     }
 
@@ -39,3 +36,9 @@ export let UserList = ({ name, age, hobbies }: UserListProps) => {
         </div>
     );
 };
+
+UserList.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
+}

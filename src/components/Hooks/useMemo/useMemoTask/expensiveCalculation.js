@@ -1,24 +1,20 @@
 import { useMemo } from "react";
 
-export let ExpensiveCalculation = ()=>{
-    let calculation = ()=>{
-        let i = 0;
-        let j = 0;
-        for(i = 0; i < 100000000000000000000; i++){
-            i = i * i;
-            for(j = 0; j < 100000000000000000000; j++){
-                j = j * j;
-            }
+export let ExpensiveCalculation = () => {
+    const calculation = () => {
+        let total = 0;
+        for (let i = 0; i < 5e8; i++) {   // realistic heavy loop
+            total += i;
         }
         console.log("expensive loop");
-        return i * j;
-    }
+        return total;
+    };
 
-    let myvalue = useMemo(()=> calculation(),[]);
+    let myvalue = useMemo(() => calculation(), []);
 
     console.log("expensive component");
 
-    return(
+    return (
         <h1>calculation {myvalue}</h1>
     )
 }

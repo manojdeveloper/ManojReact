@@ -27,7 +27,7 @@ import { Accordian } from './components/Accordian/Accordian';
 import { ReactRedux } from './components/ReactRedux/ReactRedux';
 import { HighOrderComponent } from './components/HighOrder/HighOrderComponent';
 import { TodoApp } from './components/TodoApp/TodoApp';
-import { PropTypeCheck } from './components/PropType/PropTypeCheck.tsx';
+import { PropTypeCheck } from './components/PropType/PropTypeCheck.js';
 
 export const myroute = createBrowserRouter([
   {
